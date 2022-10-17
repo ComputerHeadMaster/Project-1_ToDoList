@@ -9,7 +9,7 @@ const todoItemList = document.querySelector('.items');
 //Tallenus tila = store
 let tehtavat = [];
 
-todoForm.addEventListener('click', 
+todoForm.addEventListener('submit', 
 function(event){
 
 //estä appin uudenleen lataus listaa tehdessä
@@ -23,12 +23,13 @@ function addTodo(item){
 
     const tehtava ={
         id: Date.now(),
-        nimi: item,
+        name: item,
         completed: false
     };
 
     tehtavat.push(tehtava);
     addToLocalStorage(tehtavat);
+    todoInput.value = '';
 
  }
 }
@@ -54,7 +55,7 @@ function renderTodos(tehtavat){
        li.innerHTML = `
        <input type="checkbox" class="checkbox" ${checked}>
        ${item.name}
-       <button class="poista">X</button>
+       <button class="poista">x</button>
        `;
 
        todoItemList.append(li);
