@@ -35,7 +35,7 @@ function addTodo(item) {
     // kaikki tämä tehtyä tyhjennä lopuksi syöttöruudun arvo
     todoInput.value = '';
   }
-  }
+  
 }
 // tuo annetut tehtävät näytölle
 function renderTodos(todos) {
