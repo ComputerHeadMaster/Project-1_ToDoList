@@ -14,6 +14,13 @@ todoForm.addEventListener('submit', function(event) {
 });
 
 function addTodo(item) {
+  if (item == ''){
+    alert("Et ole antanut tehtävää, jonka voisi lisätä listalle.") 
+  } //jos "item" on tyhjä, sivu ilmoittaa siitä kun yrität lisätä tyhjää tehtävää
+  if( item.length < 3 && item.length > 0){
+    alert("Tehtävä on liian lyhyt.") 
+    return false;
+  }//jos "item" on lyhyempi kuin 3 merkkiä, sivu ilmoittaa siitä
   // jos "item" ei ole tyhjä
   if (item !== '') {
     // tee objecti, jossa on id, nimi sekä complete ominaisuudet
@@ -22,13 +29,13 @@ function addTodo(item) {
       name: item,
       completed: false
     };// lisää ne taulukkoon
+    console.log("Tallennetaan listaan...")
     todos.push(todo);
     addToLocalStorage(todos); // tallena ne localStorageen 
     // kaikki tämä tehtyä tyhjennä lopuksi syöttöruudun arvo
     todoInput.value = '';
-  } if (item == ''){
-    alert("Et ole antanut tehtävää, jonka voisi lisätä listalle.") 
-  } //jos "item" on tyhjä, sivu ilmoittaa siitä kun yrität lisätä tyhjää tehtävää
+  }
+  }
 }
 // tuo annetut tehtävät näytölle
 function renderTodos(todos) {
