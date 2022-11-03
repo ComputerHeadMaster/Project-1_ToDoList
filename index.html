@@ -1,35 +1,25 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <title>Project 1 - ToDo -List</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <script src="js/script.js"></script>
+  <title>Project 1 - Tehtävä lista</title>
 </head>
-<body>
-
-<!-- Appin rakenne -->
-<div id="pohja">
-    <h1>Tehtävä lista</h1><br>
-
-        <!-- Tehtävän lisäys formi -->
-        <div class="uusTeh">
-        
-            <form class="todo-form">
-                <input type="text" class="myInput" placeholder="Tehtävä..."> 
-                <input type="submit" id="register-btn" value="Lisää" />
-            </form></div>
-            
-
-         <!-- Itse koko lista näkyviin -->
-            <div class="lista">
-                <ul class="items">
-
-                </ul>
-            </div>
-
-</div>
-
+<body><div class="container">
+    <form class="todo-form">
+      <input type="text" class="todo-input" placeholder="Lisää tehtävä...">
+      <button type="submit" class="add-button">Lisää</button>
+    </form><ul class="todo-items">
+      <!-- testi tehtävä -->
+      <li class="item" data-key="1594003133171">
+        <input class="checkbox" type="checkbox">
+        Käy salilla
+        <button class="delete-button">X</button>
+      </li>
+    </ul>
+  </div>
+  
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

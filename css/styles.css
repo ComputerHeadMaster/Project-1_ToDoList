@@ -1,64 +1,105 @@
-@charset "UTF-8";
-/* CSS Document */
 
-* {margin: 0; padding: 0; outline: 0;} /* Nollaa sivun pohjan */
-
-body { 
-    width: 100%;
+* {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    width: 100vw;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
+    background: grey;
     font-family: sans-serif;
-    background-color: rgb(255, 255, 255);
-	color: #ffffff;
-}
+  }
+  button:hover {
+    cursor: pointer;
+    background-color: #57af24;
+    color: #fff;
+  }
+  ul {
+    list-style-type: none; 
+  }
+  ul li:hover {
+    background: #ddd;
+  }
 
-/*  */
-#pohja { 
-    background-color: aquamarine;
-    display: block;
-    padding: 50px;
-    margin: 15px;
-    text-align: center;
-
-}
-
-/*  */
-.uusTeh { 
+  .container {
+    width: 40%;
+    top: 30%;
+    left: 50%;
+    max-width: 490px;
+    min-width: 450px;
+    min-height: 100px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-}
-
-/*  */
-.todo-form {
-    margin: 40px 0px;
-    background: white;
-    padding: 25px 30px;
-    border-radius: 2px;
-}
-.myInput{
-    width: 250px;
-    outline: none;
-    padding: 12px;
-    border-radius: 3px;
-}
-.nappi{
-    /* border: none;
-    outline: none;
-   border-radius: 3px;*/
-    padding: 12px 20px;
-    cursor: pointer;
-}
-
-/*  */
-.lista {
-    background-color:rgb(177, 236, 216);
-    padding: 20px;
+    background: rgb(243, 243, 243);
+    transform: translate(-50%,-50%);
+    position: absolute;
+    padding: 30px 20px;
     margin-top: 10px;
-    border-radius: 3px;
-}
+  }
+  .todo-form {
+    margin: 40px 0px;
+  }
+  .todo-input {
+    width: 250px;
+    border: 2px solid #d1d3d4;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  .add-button {
+    background-color: #686868;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 1.2rem;
+  }
 
-.items{
+  .todo-items {
     min-width: 350px;
-}
+  }
+  .item {
+    background-color: #fff;
+    padding: 15px;
+    font-size: 1.2rem;
+  }.item:first-child {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }.item:last-child {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+  .checkbox {
+    margin-right: 10px;
+  }
+  .delete-button {
+    float: right;
+    color: #686868;
+    background-color:  rgba(255, 255, 255, 0);
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    padding: 4px 9px;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    font-weight: 550;
+  }
+  .delete-button:hover {
+    background-color: #600000;
+    color: #fff;
+  }
+  .checked { 
+    text-decoration: line-through;
+    background: #888;
+    color: #fff;
+  }
+  .checked:hover  { 
+    background: #888;;
+  }
